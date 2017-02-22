@@ -1,15 +1,19 @@
 <h1>Here is a basic Front page</h1>
 
-<p id="replace">Replace Me</p>
+<ul id="replace">
+    <li>Replace Me</li>
+</ul>
 
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
 $(function($) {
-    $('#replace').html('Replaced by jQuery');
-
     $.getJSON('/api/values', function(response){
-        $('#replace').html(response);
-    })
+        var $replace = $('#replace');
+        $replace.html('');
+        $.each(response, function(index, item) {
+            $('<li>').html(item).appendTo($replace)
+        })
+    });
 })
 
 </script>
