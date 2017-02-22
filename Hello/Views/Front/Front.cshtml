@@ -7,6 +7,10 @@
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
 $(function($) {
+    // This is at the end of the HTML content, so it's not _really_ necessary to
+    // delay until DOM ready. But In a real app, views would be assembled, and this
+    // wouldn't necessarily be the end of the page.
+
     $.getJSON('/api/values', function(response){
         var $replace = $('#replace');
         $replace.html('');
