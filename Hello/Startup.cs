@@ -3,11 +3,17 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Autofac;
+using Hello.Models;
+using Autofac.Extensions.DependencyInjection;
+using System;
 
 namespace Hello
 {
     public class Startup
     {
+        private IContainer container;
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -21,10 +27,18 @@ namespace Hello
         public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
             services.AddMvc();
+            var builder = new ContainerBuilder();
+
+            builder.RegisterType<FixedModel>(); //.InstancePerRequest();
+            builder.Populate(services);
+
+            container = builder.Build();
+
+            return new AutofacServiceProvider(container);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

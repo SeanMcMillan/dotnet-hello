@@ -11,9 +11,9 @@ namespace Hello.Models
         {
             get
             {
-                IEnumerable<string> ret = new List<string>();
+                var ret = new List<string>();
                 for (var i=0; i < 10; i++) {
-                    ret.Append(response);
+                    ret.Add(response);
                 }
                 return ret;
             }
