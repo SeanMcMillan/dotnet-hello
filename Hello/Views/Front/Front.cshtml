@@ -1,0 +1,15 @@
+<h1>Here is a basic Front page</h1>
+
+<p id="replace">Replace Me</p>
+
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function($) {
+    $('#replace').html('Replaced by jQuery');
+
+    $.getJSON('/api/values', function(response){
+        $('#replace').html(response);
+    })
+})
+
+</script>
