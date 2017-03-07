@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Hello.Models
+namespace BO.Models
 {
 public class FixedModel : ListModel
     {

@@ -2,10 +2,7 @@
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.1.0",
-      "type": "platform",
-      "library": {
-        "target": "BO"
-      }
+      "type": "platform"
     },
     "Microsoft.AspNetCore.Mvc": "1.1.0",
     "Microsoft.AspNetCore.Routing": "1.1.0",
@@ -20,7 +17,8 @@
     "Microsoft.Extensions.Logging.Debug": "1.1.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
     "Autofac": "4.3.0",
-    "Autofac.Extensions.DependencyInjection": "4.0.0"
+    "Autofac.Extensions.DependencyInjection": "4.0.0",
+    "BO": {"target": "project"}
   },
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.1.0-preview4-final"

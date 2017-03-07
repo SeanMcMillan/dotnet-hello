@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Hello.Models;
+using BO.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hello.Controllers

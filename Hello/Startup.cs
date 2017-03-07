@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Autofac;
-using Hello.Models;
+using BO.Models;
 using Autofac.Extensions.DependencyInjection;
 using System;
 
