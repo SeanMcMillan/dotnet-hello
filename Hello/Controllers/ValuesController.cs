@@ -7,9 +7,9 @@ namespace Hello.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private FixedModel model;
+        private ListModel model;
 
-        public ValuesController(FixedModel _model) {
+        public ValuesController(ListModel _model) {
             model = _model;
         }
         // GET api/values

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Hello.Models
 {
-    public class FixedModel
+public class FixedModel : ListModel
     {
         private string response = "Hello World";
 

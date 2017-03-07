@@ -33,7 +33,7 @@ namespace Hello
             services.AddMvc();
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<FixedModel>(); //.InstancePerRequest();
+            builder.RegisterType<FixedModel>().As<ListModel>();
             builder.Populate(services);
 
             container = builder.Build();
